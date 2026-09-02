@@ -1,0 +1,382 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+/* Навигация */
+.nav-list {
+  list-style: none;
+}
+
+.nav-link {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-link-current {
+  border-bottom: #756257 solid 2px ;
+}
+
+.nav-user-list {
+  list-style: none;
+}
+
+.nav-user-link {
+  text-decoration: none;
+}
+
+.favorites-count {
+  color: #FFFFFF;
+  background-color: #7DB54F;
+}
+
+.btn-desire {
+  text-decoration: none;
+}
+
+.search-icon {
+  background-image: url('../images/icons/search.svg');
+  background-repeat: no-repeat;
+}
+
+.heart-icon {
+  background-image: url('../images/icons/heart.svg');
+  background-repeat: no-repeat;
+}
+
+/* Hero секция */
+.hero {
+  background-image: url('../images/welcome-background.jpg');
+  background-color: #AEC4DC;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* Секция преимущества (главная страница) */
+.block-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.block-text {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.advantages-list {
+  list-style: none;
+}
+
+.advantages-item:first-child,
+.advantages-item:last-child {
+  color: #FFFFFF;
+  background-color: #82B3D3;
+}
+
+.advantages-item:nth-child(2n) {
+  background-color: #F0F5F9;
+}
+
+.advantages-item:nth-child(3) {
+  background-color: #E6F0F6;
+}
+
+.advantages-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages-desc {
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+}
+
+/* Cекция услуги (главная страница) */
+.services-list {
+  list-style: none;
+}
+
+.services-item:first-child,
+.services-item:last-child {
+  background-color: #F0F5F9;
+}
+
+.services-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.services-desc {
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.house-icon {
+  background-image: url('../images/icons/house.svg');
+  background-repeat: no-repeat;
+}
+
+.food-icon {
+  background-image: url('../images/icons/food.svg');
+  background-repeat: no-repeat;
+}
+
+.souvenir-icon {
+  background-image: url('../images/icons/souvenir.svg');
+  background-repeat: no-repeat;
+}
+
+/* Поиск отеля (главная страница) */
+.hotel-search-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hotel-search-desc {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+/* Подписка */
+.subscribe-title {
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.subscribe-background {
+  color: #FFFFFF;
+  background-image: url("../images/subscribe-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #486778;
+}
+
+.subscribe-desc {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.subscribe-inp {
+  font-size: 18px;
+  border: none;
+  background-color: #F2F2F2;
+}
+
+.hotel-search-btn {
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+/* Фильтр гостиниц (каталог) */
+.inner-header {
+  background-image: url('../images/filter-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #87AECD;
+}
+
+.inner-header-title {
+  font-size: 60px;
+  line-height: 78px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.breadcrumbs {
+  font-size: 16px;
+  list-style: none;
+  color: #FFFFFF;
+}
+
+.catalog-filter-group {
+  border: none;
+}
+
+.catalog-filter-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.catalog-filter-list {
+  list-style: none;
+}
+
+.catalog-filter-item {
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
+}
+
+.control-input-minmax {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.catalog-filter-reset {
+  background-color: transparent;
+}
+
+/* Поиск (каталог) */
+.search-heading {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.select-control {
+  font-size: 18px;
+}
+
+.view-list {
+  list-style: none;
+}
+
+/* Отели (каталог) */
+.hotels-list {
+  list-style: none;
+}
+
+.hotels-card {
+  border: #E5E5E5 solid 1px;
+}
+
+.hotels-card-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.hotels-card-price {
+  text-align: right;
+}
+
+.hotels-card-link {
+  text-decoration: none;
+}
+
+/* Пагинация */
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-link {
+  color: #FFFFFF;
+  background-color: #82B3D3;
+  text-decoration: none;
+}
+
+.pagination-link-current {
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+/* Футер */
+.footer-social-list {
+  list-style: none;
+}
+
+.vk-icon {
+  background-image: url('../images/social/vk.svg');
+  background-repeat: no-repeat;
+}
+
+.telegram-icon {
+  background-image: url('../images/social/tg.svg');
+  background-repeat: no-repeat;
+}
+
+.youtube-icon {
+  background-image: url('../images/social/youtube.svg');
+  background-repeat: no-repeat;
+}
+
+.footer-contact-number {
+  font-size: 40px;
+  line-height: 40px;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Кнопки */
+.btn {
+  font-weight: 700;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.btn-brown {
+  color: #FFFFFF;
+  background-color: #756157;
+}
+
+.btn-blue {
+  background-color: #82B3D3;
+}
+
+.btn-green {
+  background-color: #7DB54F;
+}
+
+.btn-grey {
+  background-color: #F2F2F2;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

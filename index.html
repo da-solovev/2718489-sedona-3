@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header" data-test="header">
@@ -23,18 +24,18 @@
         </ul>
         <ul class="nav-user-list">
           <li class="nav-user-item">
-            <a href="#" class="nav-user-link">
+            <a href="#" class="nav-user-link search-icon">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
           <li class="nav-user-item">
-            <a href="#" class="nav-user-link">
+            <a href="#" class="nav-user-link heart-icon">
               <span class="visually-hidden">Избранное</span>
               <span class="favorites-count">12</span>
             </a>
           </li>
         </ul>
-        <a href="#" class="btn btn-primary btn-desire">Хочу сюда!</a>
+        <a href="#" class="btn btn-brown btn-desire">Хочу сюда!</a>
       </nav>
     </header>
     <main class="main-index" data-test="main">
@@ -43,9 +44,9 @@
         <img src="images/welcome.svg" width="458" height="352" alt="Логотип приветствие Седона" class="hero-logo">
       </section>
       <section class="advantages" data-test="advantages">
-        <div class="advantages-container">
-          <h2 class="container-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
-          <p class="container-text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+        <div class="advantages-block">
+          <h2 class="block-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+          <p class="block-text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
         </div>
         <h2 class="visually-hidden">Преимущества</h2>
         <ul class="advantages-list">
@@ -84,21 +85,21 @@
         </ul>
       </section>
       <section class="services">
-        <div class="services-container">
-          <h2 class="container-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
-          <p class="container-text">Опытный персонал и качественное обслуживание!</p>
+        <div class="services-block">
+          <h2 class="block-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
+          <p class="block-text">Опытный персонал и качественное обслуживание!</p>
         </div>
         <h2 class="visually-hidden">Услуги</h2>
         <ul class="services-list">
-          <li class="services-item">
+          <li class="services-item house-icon">
             <h3 class="services-title">Жильё</h3>
             <p class="services-desc">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
           </li>
-          <li class="services-item">
+          <li class="services-item food-icon">
             <h3 class="services-title">Еда</h3>
             <p class="services-desc">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
           </li>
-          <li class="services-item">
+          <li class="services-item souvenir-icon">
             <h3 class="services-title">Сувениры</h3>
             <p class="services-desc">Не только китайского, но и настоящего местного производства!</p>
           </li>
@@ -106,15 +107,15 @@
       </section>
       <section class="hotel-search" data-test="search">
         <h2 class="hotel-search-title">Заинтересовались?</h2>
-        <p class="hotel-search-desc">Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <button class="btn btn-primary hotel-search-btn" type="button">Поиск гостиницы в седоне</button>
+        <p class="hotel-search-desc">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <button class="btn btn-brown hotel-search-btn" type="button">Поиск гостиницы в седоне</button>
       </section>
-      <section class="subscribe" data-test="subscribe">
+      <section class="subscribe subscribe-background" data-test="subscribe">
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p class="subscribe-desc">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
         <form action="https://echo.htmlacademy.ru/" class="subscribe-form" method="post">
           <input type="email" class="subscribe-inp" name="email" placeholder="Ваш e-mail">
-          <button type="submit" class="subscribe-btn">Подписаться</button>
+          <button type="submit" class="btn btn-blue subscribe-btn">Подписаться</button>
         </form>
       </section>
     </main>
