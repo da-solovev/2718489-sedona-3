@@ -58,6 +58,7 @@ body {
   width: 1200px;
   margin: 0 auto;
   background-color: #ffffff;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 .main-index {
@@ -162,7 +163,7 @@ body {
 
 /* Hero секция */
 .hero {
-  padding: 51px 371px 82px;
+  padding: 50px 371px 79px;
   background-image: url("../images/welcome-divider.svg"), url("../images/welcome-background.jpg");
   background-color: #aec4dc;
   background-repeat: no-repeat, no-repeat;
@@ -172,13 +173,16 @@ body {
 
 /* Секция преимущества (главная страница) */
 .advantages-block {
-  padding: 71px 274px;
+  padding: 70px 274px 89px;
   text-align: center;
+}
+
+.advantages-block .block-title {
+  margin-bottom: 25px;
 }
 
 .block-title {
   margin: 0;
-  margin-bottom: 20px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -274,6 +278,10 @@ body {
   text-align: center;
 }
 
+.services-block .block-title {
+  margin-bottom: 20px;
+}
+
 .services-list {
   display: flex;
   flex-wrap: wrap;
@@ -324,6 +332,10 @@ body {
   text-align: center;
 }
 
+.hotel-search .block-title {
+  margin-bottom: 20px;
+}
+
 .hotel-search .block-subtitle {
   margin-bottom: 54px;
 }
@@ -336,6 +348,10 @@ body {
 .subscribe {
   padding: 96px 258px 104px;
   text-align: center;
+}
+
+.subscribe .block-title {
+  margin-bottom: 20px;
 }
 
 .subscribe.subscribe-background .block-title {
@@ -380,7 +396,7 @@ body {
 }
 
 .inner-header {
-  padding: 35px 70px 70px;
+  padding: 35px 70px 73px;
   background-image: url("../images/filter-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -679,13 +695,17 @@ body {
 }
 
 .pagination-item {
-  min-width: 60px;
   text-align: center;
+}
+
+.pagination-item:not(:has(a)) {
+  width: 60px;
 }
 
 .pagination-link {
   display: block;
-  padding: 12px;
+  padding: 11px;
+  min-width: 60px;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
@@ -695,6 +715,18 @@ body {
   background-color: #82b3d3;
   text-decoration: none;
   border-radius: 4px;
+  border: 1px solid transparent;
+}
+
+.pagination-item:hover a:not(.pagination-link-current),
+.pagination-item:focus-visible a:not(.pagination-link-current) {
+  border-color: #82b3d3;
+  background-color: #68a2ca;
+}
+
+.pagination-item:active a:not(.pagination-link-current) {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #82b3d3;
 }
 
 .pagination-link-current {
@@ -706,6 +738,7 @@ body {
 .page-footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 45px 70px 35px;
 }
 
@@ -717,21 +750,20 @@ body {
 }
 
 .footer-social-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 48px;
   height: 40px;
 }
 
-.vk-icon {
-  background: url("../images/social/vk.svg") no-repeat center;
+.footer-social-link:hover svg,
+.footer-social-link:focus-visible svg {
+  fill: #68a2ca;
 }
 
-.telegram-icon {
-  background: url("../images/social/tg.svg") no-repeat center;
-}
-
-.youtube-icon {
-  background: url("../images/social/youtube.svg") no-repeat center;
+.footer-social-link:active svg {
+  opacity: 0.3;
 }
 
 .footer-contact-number {
@@ -741,8 +773,28 @@ body {
   text-decoration: none;
 }
 
+.footer-contact-number:hover,
+.footer-contact-number:focus-visible {
+  color: #756157;
+}
+
+.footer-contact-number:active {
+  opacity: 0.3;
+}
+
 .footer-logo-link {
   display: block;
+  width: 115px;
+  height: 33px;
+}
+
+.footer-logo-link:hover svg,
+.footer-logo-link:focus-visible svg {
+  fill: #756157;
+}
+
+.footer-logo-link:active svg {
+  opacity: 0.3;
 }
 
 /* Кнопки */
@@ -759,10 +811,7 @@ body {
   text-transform: uppercase;
   border: none;
   border-radius: 4px;
-}
-
-.btn:focus-visible {
-  outline: none;
+  cursor: pointer;
 }
 
 .btn-large {
