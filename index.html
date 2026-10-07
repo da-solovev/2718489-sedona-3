@@ -59,22 +59,16 @@
               <img src="images/city.jpg" width="800" height="385" alt="Фото города Седона" class="advantages-img">
             </li>
             <li class="advantages-item">
-              <div class="advantages-container">
-                <h3 class="item-title">Небольшая площадь</h3>
-                <p class="item-subtitle">Все достопримечательности находятся очень близко</p>
-              </div>
+              <h3 class="item-title">Небольшая площадь</h3>
+              <p class="item-subtitle">Все достопримечательности находятся очень близко</p>
             </li>
             <li class="advantages-item">
-              <div class="advantages-container">
-                <h3 class="item-title">Красивая<br>дорога</h3>
-                <p class="item-subtitle">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-              </div>
+              <h3 class="item-title">Красивая<br>дорога</h3>
+              <p class="item-subtitle">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </li>
             <li class="advantages-item">
-              <div class="advantages-container">
-                <h3 class="item-title">Мало<br>туристов</h3>
-                <p class="item-subtitle">Большинство едет в Гранд Каньон и толпится там</p>
-              </div>
+              <h3 class="item-title">Мало<br>туристов</h3>
+              <p class="item-subtitle">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
             <li class="advantages-item advantages-picture">
               <img src="images/bridge.jpg" width="800" height="385" alt="Фото моста дьявола" class="advantages-img">
@@ -154,6 +148,41 @@
           </svg>
         </a>
       </footer>
+    </div>
+    <div class="modal-container" style="display:none">
+      <div class="modal">
+        <button class="modal-close-btn">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title block-title">Поиск гостиницы в Седоне</h2>
+          <form action="https://echo.htmlacademy.ru/" method="post" class="modal-form">
+            <label class="form-label" for="arrival-date">Дата заезда:</label>
+            <div class="form-field">
+              <input class="form-input" id="arrival-date" type="date" value="2020-04-27">
+              <span class="form-message invalid-message">Мы не можем отправить вас в прошлое.</span>
+            </div>
+            <label class="form-label" for="departure-date">Дата выезда:</label>
+            <div class="form-field">
+              <input class="form-input" id="departure-date" type="date" value="2023-09-01">
+              <span class="form-message">На эти даты есть свободные номера. Пока есть.</span>
+            </div>
+            <label class="form-label" for="adults">Взрослые:</label>
+            <div class="form-counter">
+              <button type="button" class="counter-btn btn-minus"></button>
+              <input class="form-input" id="adults" type="number" value="2">
+              <button type="button" class="counter-btn btn-plus"></button>
+            </div>
+            <label class="form-label" for="children">Дети:</label>
+            <div class="form-counter">
+              <button type="button" class="counter-btn btn-minus"></button>
+              <input class="form-input" id="children" type="number" value="2">
+              <button type="button" class="counter-btn btn-plus"></button>
+            </div>
+            <button class="modal-form-submit btn btn-blue btn-large" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
     </div>
   </body>
 </html>
