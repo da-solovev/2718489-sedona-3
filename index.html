@@ -148,41 +148,70 @@
           </svg>
         </a>
       </footer>
-    </div>
-    <div class="modal-container" style="display:none">
-      <div class="modal">
-        <button class="modal-close-btn">
-          <span class="visually-hidden">Закрыть</span>
-        </button>
-        <section class="modal-content">
-          <h2 class="modal-title block-title">Поиск гостиницы в Седоне</h2>
-          <form action="https://echo.htmlacademy.ru/" method="post" class="modal-form">
-            <label class="form-label" for="arrival-date">Дата заезда:</label>
-            <div class="form-field">
-              <input class="form-input" id="arrival-date" type="date" value="2020-04-27">
-              <span class="form-message invalid-message">Мы не можем отправить вас в прошлое.</span>
-            </div>
-            <label class="form-label" for="departure-date">Дата выезда:</label>
-            <div class="form-field">
-              <input class="form-input" id="departure-date" type="date" value="2023-09-01">
-              <span class="form-message">На эти даты есть свободные номера. Пока есть.</span>
-            </div>
-            <label class="form-label" for="adults">Взрослые:</label>
-            <div class="form-counter">
-              <button type="button" class="counter-btn btn-minus"></button>
-              <input class="form-input" id="adults" type="number" value="2">
-              <button type="button" class="counter-btn btn-plus"></button>
-            </div>
-            <label class="form-label" for="children">Дети:</label>
-            <div class="form-counter">
-              <button type="button" class="counter-btn btn-minus"></button>
-              <input class="form-input" id="children" type="number" value="2">
-              <button type="button" class="counter-btn btn-plus"></button>
-            </div>
-            <button class="modal-form-submit btn btn-blue btn-large" type="submit">Найти</button>
-          </form>
-        </section>
+      <div class="modal-container modal-hidden">
+        <div class="modal">
+          <button class="modal-close-btn" type="button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+          <section class="modal-content">
+            <h2 class="modal-title block-title">Поиск гостиницы в Седоне</h2>
+            <form action="https://echo.htmlacademy.ru/" method="post" class="modal-form">
+              <label class="form-label" for="arrival-date">Дата заезда:</label>
+              <div class="form-field">
+                <input class="form-input" id="arrival-date" name="arrival-date" type="text" value="27 апреля 2020" placeholder="Укажите дату">
+                <span class="form-message invalid-message">Мы не можем отправить вас в прошлое.</span>
+              </div>
+              <label class="form-label" for="departure-date">Дата выезда:</label>
+              <div class="form-field">
+                <input class="form-input" id="departure-date" name="departure-date" type="text" value="1 сентября 2023" placeholder="Укажите дату">
+                <span class="form-message">На эти даты есть свободные номера. Пока есть.</span>
+              </div>
+              <label class="form-label label-counter" for="adults">Взрослые:</label>
+              <div class="form-counter">
+                <button type="button" class="counter-btn btn-minus">
+                  <span class="visually-hidden">Уменьшить количество</span>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="rgba(117, 97, 87, 0.3)" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9V11H17V9H3Z"/>
+                  </svg>
+                </button>
+                <input class="form-input" id="adults" name="adults" type="number" value="2" max="9999">
+                <button type="button" class="counter-btn btn-plus">
+                  <span class="visually-hidden">Увеличить количество</span>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="rgba(117, 97, 87, 0.3)" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="label-wraper">
+                <label class="form-label label-counter" for="children">Дети:</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-count">
+                    <span class="visually-hidden">Подробная информация</span>
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-count">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+              </div>
+              <div class="form-counter">
+                <button type="button" class="counter-btn btn-minus">
+                  <span class="visually-hidden">Уменьшить количество</span>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="rgba(117, 97, 87, 0.3)" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9V11H17V9H3Z"/>
+                  </svg>
+                </button>
+                <input class="form-input" id="children" name="children" type="number" value="2">
+                <button type="button" class="counter-btn btn-plus">
+                  <span class="visually-hidden">Увеличить количество</span>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="rgba(117, 97, 87, 0.3)" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z"/>
+                  </svg>
+                </button>
+              </div>
+              <button class="modal-form-submit btn btn-blue btn-large" type="submit">Найти</button>
+            </form>
+          </section>
+        </div>
       </div>
     </div>
+
   </body>
 </html>

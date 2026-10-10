@@ -106,17 +106,17 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="catalog-filter-group">
+          <fieldset class="catalog-filter-group group-range">
             <legend class="catalog-filter-title">Стоимость, ₽:</legend>
             <div class="range">
               <div class="range-wrapper-inputs">
                   <div class="range-input">
-                    <input type="number" class="control-input-minmax input-min" name="sum-min" value="0">
-                    <span>от</span>
+                    <label for="sum-min" class="range-label">от</label>
+                    <input type="number" id="sum-min" class="control-input-minmax input-min" name="sum-min" value="0">
                   </div>
                   <div class="range-input">
-                    <input type="number" class="control-input-minmax input-max" name="sum-max" value="9000">
-                    <span>до</span>
+                    <label for="sum-max" class="range-label">до</label>
+                    <input type="number" id="sum-max" class="control-input-minmax input-max" name="sum-max" value="9000">
                   </div>
 
                 </div>
