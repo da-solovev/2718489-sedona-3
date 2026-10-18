@@ -15,7 +15,7 @@
         <nav class="nav">
           <ul class="nav-list">
             <li class="nav-item">
-              <a href="" class="nav-link nav-link-current">Главная</a>
+              <a class="nav-link nav-link-current">Главная</a>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link">О Седоне</a>
@@ -79,7 +79,7 @@
             </li>
           </ul>
         </section>
-        <section class="services">
+        <section class="services" data-test="service">
           <div class="services-block">
             <h2 class="block-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
             <p class="block-subtitle">Опытный персонал и  качественное обслуживание!</p>
@@ -103,13 +103,14 @@
         <section class="hotel-search" data-test="search">
           <h2 class="block-title">Заинтересовались?</h2>
           <p class="block-subtitle">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <button class="btn btn-brown btn-large" type="button">Поиск гостиницы в седоне</button>
+          <a href="#modal" class="btn btn-brown btn-large">Поиск гостиницы в седоне</a>
         </section>
         <section class="subscribe subscribe-background" data-test="subscribe">
           <h2 class="block-title">Подпишитесь на рассылку</h2>
           <p class="block-subtitle">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
           <form action="https://echo.htmlacademy.ru/" class="subscribe-form" method="post">
-            <input type="email" class="subscribe-inp" aria-label="Электронная почта" name="email" placeholder="Ваш e-mail">
+            <label for="email" class="visually-hidden">Отправить email</label>
+            <input type="email" class="subscribe-inp" required aria-label="Электронная почта" name="email" id="email" placeholder="Ваш e-mail">
             <button type="submit" class="btn btn-blue btn-large">Подписаться</button>
           </form>
         </section>
@@ -141,14 +142,16 @@
             </a>
           </li>
         </ul>
-        <a href="tel:88128121212" class="footer-contact-number">+7 (812) 812-12-12</a>
+        <div class="footer-contact-wrapper">
+          <a href="tel:88128121212" class="footer-contact-number">+7 (812) 812-12-12</a>
+        </div>
         <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-logo-link">
           <svg xmlns="http://www.w3.org/2000/svg" width="115" height="33" role="img" aria-label="Логотип htmlacademy" fill="#000" viewBox="0 0 115 33">
             <path d="M0 12.9v2.6h2.5v-2.6zM11.6 4.5c-1.6 0-2.8.7-3.6 1.7h-.1V0h-2v15.5h2v-5.3c0-2.1 1.3-3.6 3.3-3.6 1.8 0 2.9 1.4 2.9 3.2v5.7h2V9.4c.1-3-1.8-4.9-4.5-4.9M26.6 4.8h-4.8V1.1h-2v3.8h-1.9v2h1.9v6c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1V6.8h4.8zM41.1 4.6c-1.6 0-2.9.8-3.5 2.1h-.1c-.6-1.2-1.8-2.1-3.4-2.1-1.4 0-2.5.8-3.1 1.8h-.1V4.8H29v10.6h2V10c0-2 1-3.5 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2V9.8c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2V8.9c.1-2.5-1.4-4.3-3.9-4.3M47.8 12.7c0 1.7 1 2.7 2.8 2.7h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V0h-2zM28.9 19.7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.4 3.6-3.6 3.6M44.2 22c-.5-2.4-2.6-4.1-5.4-4.1-3.4 0-5.6 2.5-5.6 5.6s2.2 5.6 5.6 5.6c2.8 0 4.9-1.8 5.4-4.2h-2.1c-.4 1.3-1.7 2.3-3.3 2.3-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6c1.6 0 2.8 1 3.3 2.2h2.1zM55.1 19.7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.5 3.6-3.6 3.6M68.7 19.8c-.9-1.1-2.2-1.9-3.9-1.9-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6c1.7 0 3-.8 3.8-1.8h.1v1.5h2V13.4h-2zm-3.6 7.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6M78.3 17.9c-3.3 0-5.5 2.5-5.5 5.6 0 3 2.1 5.6 5.5 5.6 2.5 0 4.5-1.3 5.2-3.6h-2.1c-.5 1-1.6 1.6-3 1.6-1.9 0-3.3-1.3-3.4-2.9h8.8c.2-3.6-2-6.3-5.5-6.3m0 1.9c1.7 0 3 1 3.3 2.6h-6.5c.3-1.5 1.5-2.6 3.2-2.6M98.2 17.9c-1.6 0-2.9.8-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4M109.4 27l-3.6-8.9h-2.2l4.8 11.6c-.3.9-.7 1.2-1.7 1.2h-2.5v2h2.5c1.8 0 2.8-.8 3.5-2.6l4.7-12.2h-2.1z" />
           </svg>
         </a>
       </footer>
-      <div class="modal-container modal-hidden">
+      <div class="modal-container" id="modal">
         <div class="modal">
           <button class="modal-close-btn" type="button">
             <span class="visually-hidden">Закрыть</span>
@@ -158,12 +161,12 @@
             <form action="https://echo.htmlacademy.ru/" method="post" class="modal-form">
               <label class="form-label" for="arrival-date">Дата заезда:</label>
               <div class="form-field">
-                <input class="form-input" id="arrival-date" name="arrival-date" type="text" value="27 апреля 2020" placeholder="Укажите дату">
+                <input class="form-input" id="arrival-date" name="arrival-date" type="text" value="27 апреля 2020" required placeholder="Укажите дату">
                 <span class="form-message invalid-message">Мы не можем отправить вас в прошлое.</span>
               </div>
               <label class="form-label" for="departure-date">Дата выезда:</label>
               <div class="form-field">
-                <input class="form-input" id="departure-date" name="departure-date" type="text" value="1 сентября 2023" placeholder="Укажите дату">
+                <input class="form-input" id="departure-date" name="departure-date" type="text" value="1 сентября 2023" required placeholder="Укажите дату">
                 <span class="form-message">На эти даты есть свободные номера. Пока есть.</span>
               </div>
               <label class="form-label label-counter" for="adults">Взрослые:</label>
@@ -174,7 +177,7 @@
                     <path d="M3 9V11H17V9H3Z"/>
                   </svg>
                 </button>
-                <input class="form-input" id="adults" name="adults" type="number" value="2" max="9999">
+                <input class="form-input" id="adults" name="adults" type="number" value="2" max="9999" required>
                 <button type="button" class="counter-btn btn-plus">
                   <span class="visually-hidden">Увеличить количество</span>
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="rgba(117, 97, 87, 0.3)" xmlns="http://www.w3.org/2000/svg">
@@ -182,7 +185,7 @@
                   </svg>
                 </button>
               </div>
-              <div class="label-wraper">
+              <div class="label-wrapper">
                 <label class="form-label label-counter" for="children">Дети:</label>
                 <span class="tooltip">
                   <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-count">
@@ -198,7 +201,7 @@
                     <path d="M3 9V11H17V9H3Z"/>
                   </svg>
                 </button>
-                <input class="form-input" id="children" name="children" type="number" value="2">
+                <input class="form-input" id="children" name="children" type="number" value="2" max="9999">
                 <button type="button" class="counter-btn btn-plus">
                   <span class="visually-hidden">Увеличить количество</span>
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="rgba(117, 97, 87, 0.3)" xmlns="http://www.w3.org/2000/svg">
@@ -212,6 +215,5 @@
         </div>
       </div>
     </div>
-
   </body>
 </html>
